@@ -4,7 +4,7 @@ const mins = document.getElementById('mins');
 const secs = document.getElementById('secs');
 
 
-let countDownDate = new Date('April 25, 2022 12:50').getTime();
+let countDownDate = new Date('June 19, 2022 12:00').getTime();
 
 let x = setInterval(() => {
     let now = new Date().getTime();
@@ -26,7 +26,6 @@ let x = setInterval(() => {
         timer.innerHTML = 'expired';
     }
 }, 1000);
-
 
 let btn1 = document.getElementById('info');
 let btn2 = document.getElementById('score');

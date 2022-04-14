@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="https://media.discordapp.net/attachments/820417108806205523/963893248470958150/favicon.png">
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+label {
+	background: #1c240e;
+	color: #435722;
+	transition: transform 400ms ease-out;
+	display: inline-block;
+  min-height: 100%;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	line-height: 100vh;
+    font-family: 'Andale mono', monospace;
+}
+
+form {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	white-space: nowrap;
+}
+input {
+	position: absolute;
+}
+
+.keys {
+	position: fixed;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem;
+	color: #1c240e;
+	text-align: center;
+	transition: all 300ms linear;
+	opacity: 0;
+    font-family: 'Andale mono', monospace;
+}
+
+input:focus ~ .keys {
+	opacity: 0.8;
+}
+
+input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+input:nth-of-type(2):checked ~ label:nth-of-type(2),
+input:nth-of-type(3):checked ~ label:nth-of-type(3),
+input:nth-of-type(4):checked ~ label:nth-of-type(4){
+   z-index: 0;
+}
+
+input:nth-of-type(1):checked ~ label {
+	transform: translate3d(0, 0, 0);
+}
+
+input:nth-of-type(2):checked ~ label {
+	transform: translate3d(-100%, 0, 0);
+}
+
+input:nth-of-type(3):checked ~ label {
+	transform: translate3d(-200%, 0, 0);
+}
+
+input:nth-of-type(4):checked ~ label {
+	transform: translate3d(-300%, 0, 0);
+}
+
+label {
+	background: #1c240e;
+	background-size: cover;
+	font-size: 3rem;
+}
+
+label[for="first"],
+label[for="third"] {
+	background: #799C3D;
+}
+
+label:before,
+label:after {
+	color: #435722;
+	display: block;
+	position: absolute;
+	padding: 1rem;
+	font-size: 3rem;
+	height: 10rem;
+	vertical-align: middle;
+	line-height: 10rem;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	cursor: pointer;
+    font-family: 'Andale mono', monospace;
+}
+
+label:before {
+	content: "\276D";
+	right: 100%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+label:after {
+	content: "\276C";
+	left: 100%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+
+
+
+<form>
+
+    <input type="radio" name="fancy" autofocus value="total" id="total" />
+    <input type="radio" name="fancy" value="first" id="first" />
+    <input type="radio" name="fancy" value="second" id="second" />
+    <input type="radio" name="fancy" value="third" id="third" />			
+<label for="total">
+</label>
+<label for="first">Game 1</label>
+<label for="second">Game 2</label>
+<label for="third">Game 3</label>
+
+<div class="keys">Use left and right keys to navigate</div>
+</form>

@@ -1,0 +1,112 @@
+/*score page*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+#score1, #score2 {
+    font-family: 'Monaco', monospace;
+}
+
+.box {
+    height: 300px;
+    width: 450px;
+    overflow: hidden;
+    background: #799c3d;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.hid-box {
+    display: flex;
+    top: 100%;
+    position: relative;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzEyPsajhGGn86EddX6n6px9kLaZlAYZuXk28hDfwlxKdygDG21mVuzFdXy2S0O1QzlSw&usqp=CAU);
+    background-size: contain;
+    transition: all .3s ease-out;
+    height: 100%;
+    font-family: "Andale mono",monospace;
+    color: #799c3d;
+}
+
+.box:hover>.hid-box {
+    top: 0;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#people,#round,#score,#score1,#score2,#team1,#team2,#teams,.individual,.person,.personScore {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center
+}
+
+.peopleRow {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 3px;
+}
+
+#people {
+    margin-bottom: 10px;
+    color: #435722;
+}
+
+#dark {
+    margin-top: 5px;
+    font-size: 20px;
+}
+.individual {
+    background-color: #799c3d;
+    margin: 3px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#mainScore:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url('https://cdn.pixabay.com/photo/2018/06/02/12/17/nature-3448282__340.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+ }
+ i {
+     color: #799C3D;
+     margin-top: 10px;
+     margin-bottom: -10px;
+     transition: transform .2s;
+ }
+ 
+ i:hover {
+     transform: scale(1.2);
+     color: #435722;
+ }
+
+ #container {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     margin: 30px;
+ }
